@@ -1,0 +1,921 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>jQuery Slot Machine</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="d58Et_hG0KrLc6xKv03J8U5NA6jqak0kCFxBaz7Y1MM" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div class="container">
+        <form id="form-size">
+            <label>3 Rows
+            <input type="radio" name="size" value="3" id="spin-size">
+            </label>
+            <label>5 Rows
+            <input type="radio" name="size" value="5" id="spin-size">
+            </label>
+            <label>7 Rows
+            <input type="radio" name="size" value="7" id="spin-size">
+            </label>
+        </form>
+        <div class="inputs">
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-1-1" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-1-2" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-1-3" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-1-4" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-1-5" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-1-6" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-1-7" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-2-1" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-2-2" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-2-3" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-2-4" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-2-5" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-2-6" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-2-7" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-3-1" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-3-2" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-3-3" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-3-4" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-3-5" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-3-6" value="0"/>
+            </div>
+            <div>
+                <input type="number"  min="0" max="9" class="form-control " id="slot-3-7" value="0"/>
+            </div>
+                <div class="size-5">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-4-1" value="0"/>
+                </div>
+                <div class="size-5">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-4-2" value="0"/>
+                </div>
+                <div class="size-5">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-4-3" value="0"/>
+                </div>
+                <div class="size-5">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-4-4" value="0"/>
+                </div>
+                <div class="size-5">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-4-5" value="0"/>
+                </div>
+                <div class="size-5">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-4-6" value="0"/>
+                </div>
+                <div class="size-5">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-4-7" value="0"/>
+                </div>
+                <div class="size-5">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-5-1" value="0"/>
+                </div>
+                <div class="size-5">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-5-2" value="0"/>
+                </div>
+                <div class="size-5">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-5-3" value="0"/>
+                </div>
+                <div class="size-5">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-5-4" value="0"/>
+                </div>
+                <div class="size-5">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-5-5" value="0"/>
+                </div>
+                <div class="size-5">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-5-6" value="0"/>
+                </div>
+                <div class="size-5">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-5-7" value="0"/>
+                </div>            
+                <div class="size-7">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-6-1" value="0"/>
+                </div>
+                <div class="size-7">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-6-2" value="0"/>
+                </div>
+                <div class="size-7">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-6-3" value="0"/>
+                </div>
+                <div class="size-7">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-6-4" value="0"/>
+                </div>
+                <div class="size-7">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-6-5" value="0"/>
+                </div>
+                <div class="size-7">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-6-6" value="0"/>
+                </div>
+                <div class="size-7">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-6-7" value="0"/>
+                </div>
+                <div class="size-7">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-7-1" value="0"/>
+                </div>
+                <div class="size-7">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-7-2" value="0"/>
+                </div>
+                <div class="size-7">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-7-3" value="0"/>
+                </div>
+                <div class="size-7">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-7-4" value="0"/>
+                </div>
+                <div class="size-7">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-7-5" value="0"/>
+                </div>
+                <div class="size-7">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-7-6" value="0"/>
+                </div>
+                <div class="size-7">
+                    <input type="number"  min="0" max="9" class="form-control " id="slot-7-7" value="0"/>
+                </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="slotwrappers">
+            <div class="slotwrapper" id="slot1">
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+            </div>
+            <div class="slotwrapper" id="slot2">
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+            </div>
+            <div class="slotwrapper" id="slot3">
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+            </div> 
+            <div class="slotwrapper" id="slot4">
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+            </div> 
+            <div class="slotwrapper" id="slot5">
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+            </div>   
+            <div class="slotwrapper" id="slot6">
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+            </div>
+            <div class="slotwrapper" id="slot7">
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/White/0.png"/></li>
+                    <li><img src="images/White/1.png"/></li>
+                    <li><img src="images/White/2.png"/></li>
+                    <li><img src="images/White/3.png"/></li>
+                    <li><img src="images/White/4.png"/></li>
+                    <li><img src="images/White/5.png"/></li>
+                    <li><img src="images/White/6.png"/></li>
+                    <li><img src="images/White/7.png"/></li>
+                    <li><img src="images/White/8.png"/></li>
+                    <li><img src="images/White/9.png"/></li>
+                </ul>
+                <ul>
+                    <li><img src="images/Red/0.png"/></li>
+                    <li><img src="images/Red/1.png"/></li>
+                    <li><img src="images/Red/2.png"/></li>
+                    <li><img src="images/Red/3.png"/></li>
+                    <li><img src="images/Red/4.png"/></li>
+                    <li><img src="images/Red/5.png"/></li>
+                    <li><img src="images/Red/6.png"/></li>
+                    <li><img src="images/Red/7.png"/></li>
+                    <li><img src="images/Red/8.png"/></li>
+                    <li><img src="images/Red/9.png"/></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container my-3 bg-light">
+        <div class="col-md-12 text-center">
+            <button type="button" class="btn" id="btn-generate">Start Spin!</button>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/slotmachine.min.js"></script>
+
+    <script type="text/javascript">
+        let spinTime = 1000;
+        let numLoops = 5;
+
+        $('#btn-generate').click(function() {
+            var num11 = $('#slot-1-1').val();
+            var num12 = $('#slot-1-2').val();
+            var num13 = $('#slot-1-3').val();
+            var num14 = $('#slot-1-4').val();
+            var num15 = $('#slot-1-5').val();
+            var num16 = $('#slot-1-6').val();
+            var num17 = $('#slot-1-7').val();
+            var num21 = $('#slot-2-1').val();
+            var num22 = $('#slot-2-2').val();
+            var num23 = $('#slot-2-3').val();
+            var num24 = $('#slot-2-4').val();
+            var num25 = $('#slot-2-5').val();
+            var num26 = $('#slot-2-6').val();
+            var num27 = $('#slot-2-7').val();
+            var num31 = $('#slot-3-1').val();
+            var num32 = $('#slot-3-2').val();
+            var num33 = $('#slot-3-3').val();
+            var num34 = $('#slot-3-4').val();
+            var num35 = $('#slot-3-5').val();
+            var num36 = $('#slot-3-6').val();
+            var num37 = $('#slot-3-7').val();
+            var num41 = $('#slot-4-1').val();
+            var num42 = $('#slot-4-2').val();
+            var num43 = $('#slot-4-3').val();
+            var num44 = $('#slot-4-4').val();
+            var num45 = $('#slot-4-5').val();
+            var num46 = $('#slot-4-6').val();
+            var num47 = $('#slot-4-7').val();
+            var num51 = $('#slot-5-1').val();
+            var num52 = $('#slot-5-2').val();
+            var num53 = $('#slot-5-3').val();
+            var num54 = $('#slot-5-4').val();
+            var num55 = $('#slot-5-5').val();
+            var num56 = $('#slot-5-6').val();
+            var num57 = $('#slot-5-7').val();
+            var num61 = $('#slot-6-1').val();
+            var num62 = $('#slot-6-2').val();
+            var num63 = $('#slot-6-3').val();
+            var num64 = $('#slot-6-4').val();
+            var num65 = $('#slot-6-5').val();
+            var num66 = $('#slot-6-6').val();
+            var num67 = $('#slot-6-7').val();
+            var num71 = $('#slot-7-1').val();
+            var num72 = $('#slot-7-2').val();
+            var num73 = $('#slot-7-3').val();
+            var num74 = $('#slot-7-4').val();
+            var num75 = $('#slot-7-5').val();
+            var num76 = $('#slot-7-6').val();
+            var num77 = $('#slot-7-7').val();
+            $('#slot1 ul').playSpin({
+                endNum: [++num11, ++num12, ++num13, ++num14, ++num15, ++num16, ++num17],
+                stopSeq: 'leftToRight',
+                time: spinTime, 
+                loops: numLoops, 
+            });
+            $('#slot2 ul').playSpin({
+                endNum: [++num21, ++num22, ++num23, ++num24, ++num25, ++num26, ++num27],
+                stopSeq: 'leftToRight',
+                time: spinTime, 
+                loops: numLoops,  
+            });
+            $('#slot3 ul').playSpin({
+                endNum: [++num31, ++num32, ++num33, ++num34, ++num35, ++num36, ++num37],
+                stopSeq: 'leftToRight',
+                time: spinTime, 
+                loops: numLoops,  
+
+            });
+            $('#slot4 ul').playSpin({
+                endNum: [++num41, ++num42, ++num43, ++num44, ++num45, ++num46, ++num47],
+                stopSeq: 'leftToRight',
+                time: spinTime, 
+                loops: numLoops,  
+            });
+            $('#slot5 ul').playSpin({
+                endNum: [++num51, ++num52, ++num53, ++num54, ++num55, ++num56, ++num57],
+                stopSeq: 'leftToRight',
+                time: spinTime, 
+                loops: numLoops,  
+            });
+            $('#slot6 ul').playSpin({
+                endNum: [++num61, ++num62, ++num63, ++num64, ++num65, ++num66, ++num67],
+                stopSeq: 'leftToRight',
+                time: spinTime, 
+                loops: numLoops,  
+            });
+            $('#slot7 ul').playSpin({
+                endNum: [++num71, ++num72, ++num73, ++num74, ++num75, ++num76, ++num77],
+                stopSeq: 'leftToRight',
+                time: spinTime, 
+                loops: numLoops,  
+            });
+        });
+
+        $('#form-size').change(function(){
+            $('.size-5').css('visibility', 'visible');
+            $('.size-7').css('visibility', 'visible');
+            $('#slot4').css('visibility', 'visible');
+            $('#slot5').css('visibility', 'visible');
+            $('#slot6').css('visibility', 'visible');
+            $('#slot7').css('visibility', 'visible');
+            var radioValue = $("input[name='size']:checked").val();
+            if(radioValue == 3) {
+                $('#slot4').css('visibility', 'hidden');
+                $('#slot5').css('visibility', 'hidden');
+                $('#slot6').css('visibility', 'hidden');
+                $('#slot7').css('visibility', 'hidden');
+                $('.size-5').css('visibility', 'hidden');
+                $('.size-7').css('visibility', 'hidden');
+            }
+            if(radioValue == 5) {
+                $('.size-7').css('visibility', 'hidden');
+                $('#slot6').css('visibility', 'hidden');
+                $('#slot7').css('visibility', 'hidden');
+            }
+        });
+    </script>
+</body>
+</html>
