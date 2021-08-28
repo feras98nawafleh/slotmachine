@@ -802,7 +802,7 @@
         let spinTime = 1000;
         let numLoops = 5;
 
-        $('#btn-generate').click(function() {
+        spin = function() {
             var num11 = $('#slot-1-1').val();
             var num12 = $('#slot-1-2').val();
             var num13 = $('#slot-1-3').val();
@@ -895,7 +895,34 @@
                 time: spinTime, 
                 loops: numLoops,  
             });
+        }
+        const start = document.getElementById("btn-start");
+        const video = document.querySelector("video");
+        let recorder, stream;
+
+        async function startRecording(callback) {
+        stream = await navigator.mediaDevices.getDisplayMedia({
+            video: { mediaSource: "screen" }
         });
+        recorder = new MediaRecorder(stream);
+
+        const chunks = [];
+        recorder.ondataavailable = (e) => chunks.push(e.data);
+        recorder.onstop = (e) => {
+            const completeBlob = new Blob(chunks, { type: chunks[0].type });
+            video.src = URL.createObjectURL(completeBlob);
+        };
+
+        recorder.start();
+        callback();
+        }
+
+        function triggerByKey(e) {
+            if (e.ctrlKey && e.key === 'ArrowDown') {
+            startRecording(spin);
+            }
+        }
+        document.addEventListener('keyup', triggerByKey, false);
 
         $('#form-size').change(function(){
             $('.size-5').css('visibility', 'visible');
@@ -920,6 +947,5 @@
             }
         });
     </script>
-    <script src="recorder.js"></script>
 </body>
 </html>

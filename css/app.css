@@ -44,10 +44,10 @@ label {
     margin: -10px;
 }
 .panel-body {
-    padding: 100px;
+    padding: 200px;
     text-align: center;
     background-image: url("../images/z1.png");
-    background-size: 80%;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
