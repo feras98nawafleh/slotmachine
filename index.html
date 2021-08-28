@@ -171,6 +171,7 @@
                 </div>
         </div>
     </div>
+    
     <div class="panel-body">
         <div class="slotwrappers">
             <div class="slotwrapper" id="slot1">
@@ -784,14 +785,7 @@
             </div>
         </div>
     </div>
-    <div style="display: flex; margin-bottom: 20px;" class="container my-3 bg-light">
-        <div class="col-md-12 text-center">
-            <button type="button" class="btn" id="btn-generate">Start Spin</button>
-        </div>
-        <div class="col-md-12 text-center">
-            <button type="button" class="btn" id="btn-start">Start Recording</button>
-        </div>
-    </div>
+
     <video autoplay />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -800,7 +794,7 @@
     <script src="js/slotmachine.min.js"></script>
     <script type="text/javascript">
         let spinTime = 1000;
-        let numLoops = 5;
+        let numLoops = 25;
 
         spin = function() {
             var num11 = $('#slot-1-1').val();
@@ -896,8 +890,9 @@
                 loops: numLoops,  
             });
         }
+        
         const start = document.getElementById("btn-start");
-        const video = document.querySelector("video");
+        const video = document.querySelector('video');
         let recorder, stream;
 
         async function startRecording(callback) {
