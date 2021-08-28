@@ -21,10 +21,8 @@ label {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto;
     grid-gap: 5px;
-}
-.slotwrappers {
-    align-items: center;
-    margin: auto;
+    background-color: #201b3b;
+    padding: 1%;
 }
 .slotwrapper {
     background-color: #201b3b;
@@ -39,7 +37,6 @@ label {
     position: relative;
     float: left;
     width: 67px;
-
 }
 .slotwrapper ul li img {
     height: 60px;
