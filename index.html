@@ -784,11 +784,16 @@
             </div>
         </div>
     </div>
-    <div class="container my-3 bg-light">
+    <div style="display: flex; margin-bottom: 20px;" class="container my-3 bg-light">
         <div class="col-md-12 text-center">
-            <button type="button" class="btn" id="btn-generate">Start Spin!</button>
+            <button type="button" class="btn" id="btn-generate">Start Spin</button>
+        </div>
+        <div class="col-md-12 text-center">
+            <button type="button" class="btn" id="btn-start">Start Recording</button>
         </div>
     </div>
+    <video autoplay />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -915,5 +920,6 @@
             }
         });
     </script>
+    <script src="recorder.js"></script>
 </body>
 </html>
