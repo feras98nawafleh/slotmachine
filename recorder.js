@@ -2,7 +2,7 @@ const start = document.getElementById("btn-start");
 const video = document.querySelector("video");
 let recorder, stream;
 
-async function startRecording() {
+async export function startRecording() {
   stream = await navigator.mediaDevices.getDisplayMedia({
     video: { mediaSource: "screen" }
   });
