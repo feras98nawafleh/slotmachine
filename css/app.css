@@ -58,4 +58,6 @@ label {
     border-radius: 10px;
     color: wheat;
 }
-
+#slot2, #slot3, #slot4, #slot5, #slot6, #slot7{
+    visibility: hidden;
+}
